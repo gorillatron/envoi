@@ -1,5 +1,5 @@
 
-var extend = require( "gorillatron-extend" )
+var extend = require( "extend" )
 
 
 /**
