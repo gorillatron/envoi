@@ -4,7 +4,7 @@
   "description": "Constructor for Mediator objects. Namespaced pub sub.",
   "keywords": ["Mediator", "utility", "loose coupling", "pubsub", "events"],
   "dependencies": {
-    "gorillatron-extend": "*"
+    "gorillatron/extend": "*"
   },
   "scripts": ["index.js"]
 }
