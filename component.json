@@ -6,5 +6,6 @@
   "dependencies": {
     "gorillatron/extend": "*"
   },
-  "scripts": ["index.js"]
+  "scripts": ["index.js"],
+  "license": "MIT"
 }
