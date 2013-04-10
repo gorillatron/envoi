@@ -1,4 +1,3 @@
-
 var extend = require( "extend" )
 
 
@@ -138,4 +137,5 @@ Mediator.prototype.namespaceMatch = function( targetNs, outerNs ) {
   return true
 }
 
-module.exports = Mediator
+module.exports = Mediator;
+ 
