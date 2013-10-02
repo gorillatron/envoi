@@ -1,7 +1,7 @@
 {
-  "name": "mediator",
-  "version": "0.0.1",
-  "description": "Loosly coupled pub-sub communiaction in your app. Namespaced.",
+  "name": "envoi",
+  "version": "0.0.11",
+  "description": "Loosly coupled and namespaced communication. Mediator, pub/sub pattern.",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/*"
@@ -11,7 +11,7 @@
     "mocha": ">=1.6.0"
   },
   "dependencies": {
-    "gorillatron-extend": "*"
+    "underscore": "~1.5.2"
   },
   "license": "MIT"
 }

@@ -1,39 +1,40 @@
-# Mediator
+# Envoi
 
-Loosely coupled pub sub accross modules
+Loosly coupled and namespaced communication. Mediator, pub/sub pattern.
 
 ## Installation
 
 ```
-$ component install gorillatron/Mediator
+$ npm install envoi
 ```
 
 ## Usage
 
 ```js
-var mediator = new Mediator()
+var Envoi = require( 'envoi' ).Envoi
+var envoi = new Envoi()
 
-mediator.subscribe( "chat", logChatEvent )
-mediator.subscribe( "chat::message", displayMessage )
+envoi.subscribe( "chat", logChatEvent )
+envoi.subscribe( "chat::message", displayMessage )
 
 // 'chat' and 'chat::message' will fire because of namespacing
-mediator.publish( "chat::message", "shaggy87", "lol dope" )
+envoi.publish( "chat::message", "shaggy87", "lol dope" )
 
 ```
 
 ### Api
 
-#### Mediator.prototype.subscribe( channel, callback, context )
+#### Envoi.prototype.subscribe( channel, callback, context )
 
 Subscribe to the given channel/namespace. Call the given callback with the given context as 'this'
 when that channels is published to.
 
-#### Mediator.prototype.unsubscribe( channel, callback )
+#### Envoi.prototype.unsubscribe( channel, callback )
 
 Unsubscribe from channel. If only channel is given all callbacks that match the channels namspace will be 
 removed. If callback is given it will only remove subscriptions that has that specific callback
 
-#### Mediator.prototype.publish( channel, args.. )
+#### Envoi.prototype.publish( channel, args.. )
 
 Publishes to the channel, calling all subscribing callbacks with the rest of the arguments as arguments
 to the calback function[s].
