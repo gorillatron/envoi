@@ -2,7 +2,6 @@ var _             = require( 'underscore' ),
     Subscription  = require( './Subscription' )
 
 
-
 /**
   @exports Mediator
 */
