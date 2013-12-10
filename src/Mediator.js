@@ -1,13 +1,18 @@
-var _ = require( 'underscore' )
-
+var _             = require( 'underscore' ),
+    Subscription  = require( './Subscription' )
 
 
 
 /**
-  @class Mediator
   @exports Mediator
 */
 module.exports = Mediator
+
+
+/**
+  @constructor
+  @class Mediator
+*/
 function Mediator( config ) {
   this.namespaces = {}
   this.configuration = _.extend({}, Mediator.configuration, config || {} )
@@ -32,8 +37,11 @@ Mediator.configuration = {
   @param {String} namespace The name of the namespace to bind the callback to
   @param {Function} callback The callback to fire
   @param {Object} context The context of the callback. The callback will have this paramter as its this value
+  @return {Subscription} subscription the created Subscription
 */
 Mediator.prototype.subscribe = function( namespace, callback, context ) {
+  var subscription
+
   if( typeof namespace !== 'string' ) 
     throw new TypeError( 'namespace must be string' ) 
   if( typeof callback !== 'function' )
@@ -42,10 +50,16 @@ Mediator.prototype.subscribe = function( namespace, callback, context ) {
   if( !this.namespaces[namespace] )
     this.namespaces[ namespace ] = [ ]
 
-  this.namespaces[ namespace ].push({
+  subscription = new Subscription({
     callback: callback,
     context: context
   })
+
+  subscription.once( 'cancel', _.bind(this.unsubscribe, this, namespace, subscription) )
+
+  this.namespaces[ namespace ].push( subscription )
+
+  return subscription
 }
 
 
@@ -56,14 +70,14 @@ Mediator.prototype.subscribe = function( namespace, callback, context ) {
   @param {String} namespace The name of the namespace to bind the callback to
   @param {Function} callback The callback to fire
 */
-Mediator.prototype.unsubscribe = function( namespace, callback ) {
+Mediator.prototype.unsubscribe = function( namespace, callbackOrSubscription ) {
   var subscribingChannel, subscriptions, i, subscription
 
   for( subscribingChannel in this.namespaces ) {
     if( !this.namespaceMatch(subscribingChannel, namespace) )
       continue
 
-    if( !callback ) {
+    if( !callbackOrSubscription ) {
       delete this.namespaces[ subscribingChannel ]
       continue
     }
@@ -72,7 +86,10 @@ Mediator.prototype.unsubscribe = function( namespace, callback ) {
 
     for( i = subscriptions.length - 1; i >= 0; i-- ) {
       subscription = subscriptions[ i ]
-      if( subscription.callback === callback ) {
+      if( subscription.callback === callbackOrSubscription ) {
+        subscriptions.splice( i, 1 )
+      }
+      if( subscription === callbackOrSubscription) {
         subscriptions.splice( i, 1 )
       }
     }
@@ -88,7 +105,7 @@ Mediator.prototype.unsubscribe = function( namespace, callback ) {
   @param {Mixed[]} args The arguments after namespace to be passed to callback
   @returns {Boolean}
 */
-Mediator.prototype.publish = function( namespace, callback ) {
+Mediator.prototype.publish = function( namespace ) {
   var subscriptions, args, subscribingChannel, i, subscription
 
   subscriptions = this.getSubscriptionsForNamespace( namespace )
@@ -96,10 +113,10 @@ Mediator.prototype.publish = function( namespace, callback ) {
   if( !subscriptions.length ) 
     return false
 
-  args = [].slice.call(arguments, 1)
+  args = [].slice.call( arguments, 1 )
   for( i = 0; i < subscriptions.length; i = i+1 ) {
     subscription = subscriptions[i]
-    subscription.callback.apply( subscription.context, args )
+    subscription.trigger( args )
   }
 
   return true
