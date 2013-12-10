@@ -18,7 +18,8 @@
     "karma-commonjs": "0.0.2",
     "karma-expect": "~1.0.0",
     "karma-safari-launcher": "~0.1.1",
-    "karma-browserify": "0.0.6"
+    "karma-browserify": "0.0.6",
+    "karma-sinon": "~1.0.0"
   },
   "dependencies": {
     "underscore": "~1.5.2"
