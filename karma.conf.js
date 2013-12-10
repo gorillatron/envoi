@@ -9,7 +9,7 @@ module.exports = function(config) {
 
 
     // frameworks to use
-    frameworks: [ 'mocha', 'expect',  'browserify' ],
+    frameworks: [ 'mocha', 'expect',  'browserify', 'sinon' ],
 
     preprocessors: {
         'tests/**/*.js': [ 'browserify' ]
