@@ -12,6 +12,9 @@ module.exports = Mediator
 /**
   @constructor
   @class Mediator
+  @property {object}   namespaces                       - object containing array with Subscription bound to the namespace 
+  @property {object}   configuration                    - configuration of this mediator
+  @property {string}   configuraion.namespaceDelimiter  - delimiter for namespaced events
 */
 function Mediator( config ) {
   this.namespaces = {}

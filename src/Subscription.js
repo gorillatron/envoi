@@ -11,8 +11,8 @@ module.exports = Subscription
 /**
   @constructor
   @class Subscription
-  @exports Subscription
-  @augments EventEmitter
+  @property {function}  callback  - callback to call when this subscription is published to
+  @property {object}    context   - this value of the callback function
 */
 function Subscription( optsOrFn, context ) {
   EventEmitter.apply( this.arguments )
@@ -27,7 +27,9 @@ function Subscription( optsOrFn, context ) {
 }
 
 
-
+/**
+  @augments EventEmitter
+*/
 inherits( Subscription, EventEmitter )
 
 
