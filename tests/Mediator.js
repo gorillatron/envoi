@@ -30,6 +30,25 @@ describe("Mediator", function() {
 
     })
 
+    it('should setup listening to "cancel" event on subscription and stopp calling it when its killed', function() {
+      var spy, subscription
+
+      spy = sinon.spy()
+      subscription = mediator.subscribe( 'foo', spy )
+
+      mediator.publish( 'foo' )
+      mediator.publish( 'foo' )
+
+      expect( spy.callCount ).to.eql( 2 )
+
+      subscription.cancel()
+
+      mediator.publish( 'foo' )
+      mediator.publish( 'foo' )
+
+      expect( spy.callCount ).to.eql( 2 )
+    })
+
   })
 
 
