@@ -1,3 +1,3 @@
 module.exports = {
-  Envoi: require( './src/Envoi' )
+  Mediator: require( './src/Mediator' )
 }
