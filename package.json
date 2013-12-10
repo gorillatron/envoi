@@ -1,6 +1,6 @@
 {
   "name": "envoi",
-  "version": "0.0.21",
+  "version": "0.1.0",
   "description": "Loosly coupled and namespaced communication. Mediator, pub/sub pattern.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,17 @@
   },
   "devDependencies": {
     "expect.js": "~0.2.0",
-    "mocha": ">=1.6.0"
+    "mocha": ">=1.6.0",
+    "karma-script-launcher": "~0.1.0",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma-mocha": "~0.1.0",
+    "karma-commonjs": "0.0.2",
+    "karma-expect": "~1.0.0",
+    "karma-safari-launcher": "~0.1.1",
+    "karma-browserify": "0.0.6"
   },
   "dependencies": {
     "underscore": "~1.5.2"
