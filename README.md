@@ -21,8 +21,9 @@ var mediator = new Mediator()
 mediator.subscribe( "chat", logChatEvent )
 mediator.subscribe( "chat::message", displayMessage )
 
-// 'chat' and 'chat::message' will fire because of namespacing
 mediator.publish( "chat::message", "shaggy87", "lol dope" )
+// -> logChatEvent()
+// -> displayMessage()
 
 ```
 
