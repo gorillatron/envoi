@@ -33,7 +33,8 @@ Mediator.configuration = {
 
 
 /**
-  Binds a callback to be called when published to the namespace given.
+  Binds a callback to be called when an event is published to the namespace given
+  as first parameter.
   @public
   @type Function
   @param {String} namespace The name of the namespace to bind the callback to
