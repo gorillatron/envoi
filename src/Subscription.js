@@ -1,5 +1,6 @@
 var inherits      = require( 'util' ).inherits,
-    EventEmitter  = require( 'events' ).EventEmitter
+    EventEmitter  = require( 'events' ).EventEmitter,
+    identity      = require( './identity' )
 
 
 /**
@@ -11,13 +12,16 @@ module.exports = Subscription
 /**
   @constructor
   @class Subscription
+  @property {int}       state     - state of the subscription, can be active of canceled
   @property {function}  callback  - callback to call when this subscription is published to
   @property {object}    context   - this value of the callback function
 */
 function Subscription( optsOrFn, context ) {
   EventEmitter.apply( this.arguments )
+  this.__state = Subscription.ACTIVE
+
   if( typeof optsOrFn == 'function' ) {
-    this.callback = optsOrFn.callback
+    this.callback = optsOrFn
     this.context = context || this
   }
   else {
@@ -25,6 +29,18 @@ function Subscription( optsOrFn, context ) {
     this.context = optsOrFn.context || this
   }
 }
+
+
+/**
+  @static
+*/
+Subscription.ACTIVE = identity()
+
+
+/**
+  @static
+*/
+Subscription.CANCELED = identity()
 
 
 /**
@@ -40,6 +56,9 @@ inherits( Subscription, EventEmitter )
   @param {Array} args
 */
 Subscription.prototype.trigger = function( args ) {
+  if( this.__state === Subscription.CANCELED ) {
+    throw new Error( 'trying to call Subscription that is canceled' )
+  }
   this.callback.apply( this.context, args )
   this.emit( 'trigger' )
 }
@@ -51,8 +70,6 @@ Subscription.prototype.trigger = function( args ) {
   @type Function
 */
 Subscription.prototype.cancel = function() {
+  this.__state = Subscription.CANCELED
   this.emit( 'cancel' )
-  this.callback = function() {
-    throw new Error( 'trying to call Subscription that is canceled' )
-  }
 }
