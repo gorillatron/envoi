@@ -1,6 +1,6 @@
 # Envoi
 
-Loosly coupled and namespaced communication. Mediator, pub/sub pattern.
+Application message passing and loosly coupled module communication library. Mediators with namespaces and shit.
 
 ## Installation
 
@@ -8,33 +8,37 @@ Loosly coupled and namespaced communication. Mediator, pub/sub pattern.
 $ npm install envoi
 ```
 
-## Usage
+## Mediator
+
+Mediator class. Publish and subscribe to namespaced events
+
+### Usage
 
 ```js
-var Envoi = require( 'envoi' ).Envoi
-var envoi = new Envoi()
+var Mediator = require( 'envoi' ).Mediator
+var mediator = new Mediator()
 
-envoi.subscribe( "chat", logChatEvent )
-envoi.subscribe( "chat::message", displayMessage )
+mediator.subscribe( "chat", logChatEvent )
+mediator.subscribe( "chat::message", displayMessage )
 
 // 'chat' and 'chat::message' will fire because of namespacing
-envoi.publish( "chat::message", "shaggy87", "lol dope" )
+mediator.publish( "chat::message", "shaggy87", "lol dope" )
 
 ```
 
-### Api
+#### Api
 
-#### Envoi.prototype.subscribe( channel, callback, context )
+##### Mediator.prototype.subscribe( channel, callback, context )
 
 Subscribe to the given channel/namespace. Call the given callback with the given context as 'this'
 when that channels is published to.
 
-#### Envoi.prototype.unsubscribe( channel, callback )
+##### Mediator.prototype.unsubscribe( channel, callback )
 
 Unsubscribe from channel. If only channel is given all callbacks that match the channels namspace will be 
 removed. If callback is given it will only remove subscriptions that has that specific callback
 
-#### Envoi.prototype.publish( channel, args.. )
+##### Mediator.prototype.publish( channel, args.. )
 
 Publishes to the channel, calling all subscribing callbacks with the rest of the arguments as arguments
 to the calback function[s].

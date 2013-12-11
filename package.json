@@ -1,7 +1,7 @@
 {
   "name": "envoi",
   "version": "0.1.0",
-  "description": "Loosly coupled and namespaced communication. Mediator, pub/sub pattern.",
+  "description": "Application message passing and loosly coupled module communication library. Mediators with namespaces and shit.",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/*"
