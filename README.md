@@ -16,6 +16,7 @@ Mediator class. Publish and subscribe to namespaced events
 
 ```js
 var Mediator = require( 'envoi' ).Mediator
+
 var mediator = new Mediator()
 
 mediator.subscribe( "chat", logChatEvent )

@@ -1,0 +1,147 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.3.14
+3 info using node@v0.10.22
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/gorillatron/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/tmp.tgz
+12 verbose folder .
+13 info prepublish envoi@0.1.0
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/gorillatron/.npm/1f1177db-tar.lock
+16 silly lockFile b49ec0f2-52011-0-7656910086516291-tmp-tgz tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/tmp.tgz
+17 verbose lock tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/tmp.tgz /Users/gorillatron/.npm/b49ec0f2-52011-0-7656910086516291-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile b49ec0f2-52011-0-7656910086516291-tmp-tgz tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/tmp.tgz
+21 silly lockFile b49ec0f2-52011-0-7656910086516291-tmp-tgz tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/tmp.tgz
+22 verbose tar unpack /var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/tmp.tgz
+23 silly lockFile 27f81978-52011-0-7656910086516291-package tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/package
+24 verbose lock tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/package /Users/gorillatron/.npm/27f81978-52011-0-7656910086516291-package.lock
+25 silly lockFile b49ec0f2-52011-0-7656910086516291-tmp-tgz tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/tmp.tgz
+26 verbose lock tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/tmp.tgz /Users/gorillatron/.npm/b49ec0f2-52011-0-7656910086516291-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm extractEntry index.js
+32 silly gunzTarPerm extractEntry karma.conf.js
+33 silly gunzTarPerm extractEntry src/Mediator.js
+34 silly gunzTarPerm extractEntry src/Subscription.js
+35 silly gunzTarPerm extractEntry src/identity.js
+36 silly gunzTarPerm extractEntry tests/Mediator.js
+37 silly gunzTarPerm extractEntry tests/Subscription.js
+38 silly lockFile 27f81978-52011-0-7656910086516291-package tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/package
+39 silly lockFile 27f81978-52011-0-7656910086516291-package tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/package
+40 silly lockFile b49ec0f2-52011-0-7656910086516291-tmp-tgz tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/tmp.tgz
+41 silly lockFile b49ec0f2-52011-0-7656910086516291-tmp-tgz tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/tmp.tgz
+42 verbose tar pack [ '/Users/gorillatron/.npm/envoi/0.1.0/package.tgz',
+42 verbose tar pack   '/var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/package' ]
+43 verbose tarball /Users/gorillatron/.npm/envoi/0.1.0/package.tgz
+44 verbose folder /var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/package
+45 silly lockFile 27f81978-52011-0-7656910086516291-package tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/package
+46 verbose lock tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/package /Users/gorillatron/.npm/27f81978-52011-0-7656910086516291-package.lock
+47 silly lockFile c57bb176-tron-npm-envoi-0-1-0-package-tgz tar:///Users/gorillatron/.npm/envoi/0.1.0/package.tgz
+48 verbose lock tar:///Users/gorillatron/.npm/envoi/0.1.0/package.tgz /Users/gorillatron/.npm/c57bb176-tron-npm-envoi-0-1-0-package-tgz.lock
+49 silly lockFile 27f81978-52011-0-7656910086516291-package tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/package
+50 silly lockFile 27f81978-52011-0-7656910086516291-package tar:///var/folders/l1/3jqths5d7cj1vl459jnzy_pw0000gn/T/npm-1452-lMJZXIII/1386768152011-0.7656910086516291/package
+51 silly lockFile c57bb176-tron-npm-envoi-0-1-0-package-tgz tar:///Users/gorillatron/.npm/envoi/0.1.0/package.tgz
+52 silly lockFile c57bb176-tron-npm-envoi-0-1-0-package-tgz tar:///Users/gorillatron/.npm/envoi/0.1.0/package.tgz
+53 silly lockFile 9f954da1-illatron-npm-envoi-0-1-0-package /Users/gorillatron/.npm/envoi/0.1.0/package
+54 verbose lock /Users/gorillatron/.npm/envoi/0.1.0/package /Users/gorillatron/.npm/9f954da1-illatron-npm-envoi-0-1-0-package.lock
+55 silly lockFile 9f954da1-illatron-npm-envoi-0-1-0-package /Users/gorillatron/.npm/envoi/0.1.0/package
+56 silly lockFile 9f954da1-illatron-npm-envoi-0-1-0-package /Users/gorillatron/.npm/envoi/0.1.0/package
+57 verbose tar unpack /Users/gorillatron/.npm/envoi/0.1.0/package.tgz
+58 silly lockFile 469eb81d-illatron-npm-envoi-0-1-0-package tar:///Users/gorillatron/.npm/envoi/0.1.0/package
+59 verbose lock tar:///Users/gorillatron/.npm/envoi/0.1.0/package /Users/gorillatron/.npm/469eb81d-illatron-npm-envoi-0-1-0-package.lock
+60 silly lockFile c57bb176-tron-npm-envoi-0-1-0-package-tgz tar:///Users/gorillatron/.npm/envoi/0.1.0/package.tgz
+61 verbose lock tar:///Users/gorillatron/.npm/envoi/0.1.0/package.tgz /Users/gorillatron/.npm/c57bb176-tron-npm-envoi-0-1-0-package-tgz.lock
+62 silly gunzTarPerm modes [ '755', '644' ]
+63 silly gunzTarPerm extractEntry package.json
+64 silly gunzTarPerm extractEntry .npmignore
+65 silly gunzTarPerm extractEntry README.md
+66 silly gunzTarPerm extractEntry index.js
+67 silly gunzTarPerm extractEntry karma.conf.js
+68 silly gunzTarPerm extractEntry src/Mediator.js
+69 silly gunzTarPerm extractEntry src/Subscription.js
+70 silly gunzTarPerm extractEntry src/identity.js
+71 silly gunzTarPerm extractEntry tests/Mediator.js
+72 silly gunzTarPerm extractEntry tests/Subscription.js
+73 silly lockFile 469eb81d-illatron-npm-envoi-0-1-0-package tar:///Users/gorillatron/.npm/envoi/0.1.0/package
+74 silly lockFile 469eb81d-illatron-npm-envoi-0-1-0-package tar:///Users/gorillatron/.npm/envoi/0.1.0/package
+75 silly lockFile c57bb176-tron-npm-envoi-0-1-0-package-tgz tar:///Users/gorillatron/.npm/envoi/0.1.0/package.tgz
+76 silly lockFile c57bb176-tron-npm-envoi-0-1-0-package-tgz tar:///Users/gorillatron/.npm/envoi/0.1.0/package.tgz
+77 verbose chmod /Users/gorillatron/.npm/envoi/0.1.0/package.tgz 644
+78 verbose chown /Users/gorillatron/.npm/envoi/0.1.0/package.tgz [ 501, 20 ]
+79 silly lockFile 3a52ce78- .
+80 silly lockFile 3a52ce78- .
+81 silly publish { name: 'envoi',
+81 silly publish   version: '0.1.0',
+81 silly publish   description: 'Application message passing and loosly coupled module communication library. Mediators with namespaces and shit.',
+81 silly publish   main: 'index.js',
+81 silly publish   scripts: { test: 'mocha tests/*' },
+81 silly publish   devDependencies:
+81 silly publish    { 'expect.js': '~0.2.0',
+81 silly publish      mocha: '>=1.6.0',
+81 silly publish      'karma-script-launcher': '~0.1.0',
+81 silly publish      'karma-chrome-launcher': '~0.1.0',
+81 silly publish      'karma-firefox-launcher': '~0.1.0',
+81 silly publish      'karma-html2js-preprocessor': '~0.1.0',
+81 silly publish      'karma-phantomjs-launcher': '~0.1.0',
+81 silly publish      'karma-mocha': '~0.1.0',
+81 silly publish      'karma-commonjs': '0.0.2',
+81 silly publish      'karma-expect': '~1.0.0',
+81 silly publish      'karma-safari-launcher': '~0.1.1',
+81 silly publish      'karma-browserify': '0.0.6',
+81 silly publish      'karma-sinon': '~1.0.0' },
+81 silly publish   dependencies: { underscore: '~1.5.2' },
+81 silly publish   license: 'MIT',
+81 silly publish   readme: '# Envoi\n\nApplication message passing and loosly coupled module communication library. Mediators with namespaces and shit.\n\n## Installation\n\n```\n$ npm install envoi\n```\n\n## Mediator\n\nMediator class. Publish and subscribe to namespaced events\n\n### Usage\n\n```js\nvar Mediator = require( \'envoi\' ).Mediator\nvar mediator = new Mediator()\n\nmediator.subscribe( "chat", logChatEvent )\nmediator.subscribe( "chat::message", displayMessage )\n\nmediator.publish( "chat::message", "shaggy87", "lol dope" )\n// -> logChatEvent()\n// -> displayMessage()\n\n```\n\n#### Api\n\n##### Mediator.prototype.subscribe( channel, callback, context )\n\nSubscribe to the given channel/namespace. Call the given callback with the given context as \'this\'\nwhen that channels is published to.\n\n##### Mediator.prototype.unsubscribe( channel, callback )\n\nUnsubscribe from channel. If only channel is given all callbacks that match the channels namspace will be \nremoved. If callback is given it will only remove subscriptions that has that specific callback\n\n##### Mediator.prototype.publish( channel, args.. )\n\nPublishes to the channel, calling all subscribing callbacks with the rest of the arguments as arguments\nto the calback function[s].\n\n\n## License \n\nMIT licensed',
+81 silly publish   readmeFilename: 'README.md',
+81 silly publish   _id: 'envoi@0.1.0',
+81 silly publish   dist: { shasum: '1d5929e688b7b6db51e9d730259d864afff234de' },
+81 silly publish   _from: '.' }
+82 verbose url raw envoi
+83 verbose url resolving [ 'https://registry.npmjs.org/', './envoi' ]
+84 verbose url resolved https://registry.npmjs.org/envoi
+85 info trying registry request attempt 1 at 14:22:32
+86 http PUT https://registry.npmjs.org/envoi
+87 http 409 https://registry.npmjs.org/envoi
+88 verbose url raw envoi
+89 verbose url resolving [ 'https://registry.npmjs.org/', './envoi' ]
+90 verbose url resolved https://registry.npmjs.org/envoi
+91 info trying registry request attempt 1 at 14:22:33
+92 http GET https://registry.npmjs.org/envoi
+93 http 200 https://registry.npmjs.org/envoi
+94 error publish fail Cannot publish over existing version.
+94 error publish fail Update the 'version' field in package.json and try again.
+94 error publish fail
+94 error publish fail If the previous version was published in error, see:
+94 error publish fail     npm help unpublish
+94 error publish fail
+94 error publish fail To automatically increment version numbers, see:
+94 error publish fail     npm help version
+95 error System Darwin 13.0.0
+96 error command "node" "/usr/local/bin/npm" "publish"
+97 error cwd /Users/gorillatron/progg/envoi
+98 error node -v v0.10.22
+99 error npm -v 1.3.14
+100 error code EPUBLISHCONFLICT
+101 verbose exit [ 1, true ]
